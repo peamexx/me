@@ -1,0 +1,78 @@
+// Import
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap'); // 'Noto Sans KR', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap'); // 'Fira Mono', monospace;
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+// Color variable
+$white: rgb(255, 255, 255);
+$gray: rgb(239, 239, 239);
+$black: rgb(51, 51, 51);
+
+// Breakpoint variable
+$lg: 1200px;
+$md: 770px;
+
+// Common css
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Fira Mono', 'Noto Sans KR', sans-serif;
+    overflow: hidden;
+}
+
+// header
+header {
+    width: 100%;
+    padding: 20px;
+    border-bottom: 1px solid $gray;
+    h1 {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+}
+
+// section
+section {
+    .visual {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        background-image: radial-gradient( circle farthest-corner at 12.3% 19.3%,  rgba(85,88,218,1) 0%, rgba(95,209,249,1) 100.2% );
+        p {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            line-height: 2;
+            color: $white;
+            font: { 
+                size: 2rem;
+                weight: bold;
+            }
+        }
+    }
+}
+
+// footer
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    border-top: 1px solid $gray;
+    background-color: $white;
+    ul {
+        display: table;
+        margin: auto;
+        li {
+            margin-bottom: 10px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
