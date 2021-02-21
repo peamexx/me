@@ -7,6 +7,9 @@
 $white: rgb(255, 255, 255);
 $gray: rgb(239, 239, 239);
 $black: rgb(51, 51, 51);
+$point: rgb(246, 79, 89);
+$pointHalf: rgba(246, 79, 89, 0.5);
+$yellow: rgb(253, 200, 48);
 
 // Breakpoint variable
 $lg: 1200px;
@@ -37,22 +40,84 @@ header {
 
 // section
 section {
-    .visual {
-        width: 100%;
-        height: 100vh;
-        position: relative;
-        background-image: radial-gradient( circle farthest-corner at 12.3% 19.3%,  rgba(85,88,218,1) 0%, rgba(95,209,249,1) 100.2% );
-        p {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            line-height: 2;
-            color: $white;
-            font: { 
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-image: radial-gradient( circle farthest-corner at 12.3% 19.3%,  rgba(85,88,218,1) 0%, rgba(95,209,249,1) 100.2% );
+    overflow-y: auto;
+    .portfolio {
+        width: 600px;
+        margin: auto;
+        margin-top: 30px;
+        padding: 20px;
+        background-color: $white;
+        .logo {
+            display: block;
+            margin: 20px 0 30px;
+            text-align: center;
+            font: {
                 size: 2rem;
                 weight: bold;
             }
+        }
+        h2 {
+            margin-bottom: 10px;
+            text-align: center;
+            font: {
+                size: 1.2rem;
+                weight: bold;
+            }
+        }
+        a {
+            display: inline-block;
+            padding: 8px;
+            border-radius: 5px;
+            background-color: $point;
+            color: $white;
+            font-size: 0.9rem;
+        }
+        .toLink {
+            display: block;
+            width: 100px;
+            text-align: center;
+            margin: auto;
+        }
+        .toGithub {
+            margin-top: 5px !important;
+            background-color: $black;
+            color: $white;
+        }
+        .sec {
+            padding: 10px 0;
+            h3 {
+                margin: 10px 0;
+                font: {
+                    size: 1.1rem;
+                    weight: bold;
+                }  
+            }
+            ul {
+                li {
+                    margin-bottom: 5px;
+                    padding-left: 15px;
+                    position: relative;
+                    &:before {
+                        content: '-';
+                        position: absolute;
+                        top: 0;
+                        left: 0px;
+                    }
+                }
+            }
+            p {
+                line-height: 1.5;
+            }
+        }
+        &:last-child {
+            margin-bottom: 200px;
+        }
+        @media (max-width: $md) {
+            width: 80%;
         }
     }
 }
@@ -70,9 +135,46 @@ footer {
         margin: auto;
         li {
             margin-bottom: 10px;
+            .con {
+                position: relative;
+                a {
+                    background-color: $point;
+                    color: $white;
+                }
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: -2px;
+                    right: -20px;
+                    width: 0;
+                    height: 0;
+                    border-top: 10px solid transparent;
+                    border-right: 15px solid $yellow;
+                    border-bottom: 10px solid transparent;
+
+                }
+                &:after {
+                    content: 'click';
+                    position: absolute;
+                    top: -2px;
+                    right: -60px;
+                    padding: 5px;
+                    border-radius: 5px;
+                    background-color: $yellow;
+                    font: {
+                        size: 0.8rem;
+                         weight: bold;
+                    }
+
+                }
+            }
             &:last-child {
                 margin-bottom: 0;
             }
+        }
+        @media (max-width: 400px) {
+            display: block;
+            width: 90%;
         }
     }
 }
