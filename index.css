@@ -50,6 +50,7 @@ section .portfolio .logo {
 
 section .portfolio h2 {
   margin-bottom: 10px;
+  line-height: 1.5;
   text-align: center;
   font-size: 1.2rem;
   font-weight: bold;
@@ -109,8 +110,14 @@ section .portfolio:last-child {
 }
 
 @media (max-width: 770px) {
+  section .portfolio:last-child {
+    margin-bottom: 50%;
+  }
+}
+
+@media (max-width: 770px) {
   section .portfolio {
-    width: 80%;
+    width: 90%;
   }
 }
 
