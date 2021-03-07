@@ -27,6 +27,11 @@ html, body {
     overflow: hidden;
 }
 
+.point {
+    color: $point;
+    font-weight: bold;
+}
+
 // header
 header {
     width: 100%;

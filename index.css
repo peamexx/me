@@ -13,6 +13,11 @@ html, body {
   overflow: hidden;
 }
 
+.point {
+  color: #f64f59;
+  font-weight: bold;
+}
+
 header {
   width: 100%;
   padding: 20px;
