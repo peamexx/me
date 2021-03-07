@@ -114,6 +114,12 @@ section .portfolio .sec p {
   line-height: 1.5;
 }
 
+section .portfolio .sec p code {
+  display: block;
+  width: 100%;
+  overflow: auto;
+}
+
 section .portfolio:last-child {
   margin-bottom: 200px;
 }

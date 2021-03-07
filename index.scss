@@ -121,6 +121,11 @@ section {
             }
             p {
                 line-height: 1.5;
+                code {
+                    display: block;
+                    width: 100%;
+                    overflow: auto;
+                }
             }
         }
         &:last-child {
